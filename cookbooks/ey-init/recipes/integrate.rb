@@ -1,3 +1,6 @@
+# Custom recipes must be run when instances are added/removed.
+include_recipe 'ey-custom::before-main'
+
 # Do a quick run
 case node.dna[:instance_role]
 when 'app', 'app_master'
